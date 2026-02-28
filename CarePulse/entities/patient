@@ -1,0 +1,130 @@
+{
+  "name": "Patient",
+  "type": "object",
+  "properties": {
+    "hospital_id": {
+      "type": "string"
+    },
+    "name": {
+      "type": "string"
+    },
+    "age": {
+      "type": "number"
+    },
+    "gender": {
+      "type": "string",
+      "enum": [
+        "Male",
+        "Female",
+        "Other"
+      ]
+    },
+    "blood_group": {
+      "type": "string",
+      "enum": [
+        "A+",
+        "A-",
+        "B+",
+        "B-",
+        "O+",
+        "O-",
+        "AB+",
+        "AB-"
+      ]
+    },
+    "mobile_number": {
+      "type": "string"
+    },
+    "pre_existing_conditions": {
+      "type": "string"
+    },
+    "medical_history": {
+      "type": "string"
+    },
+    "surgery_type": {
+      "type": "string"
+    },
+    "reason_for_surgery": {
+      "type": "string"
+    },
+    "surgery_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "treating_doctor_name": {
+      "type": "string"
+    },
+    "doctor_email": {
+      "type": "string"
+    },
+    "surgery_documents": {
+      "type": "array",
+      "items": {
+        "type": "string"
+      }
+    },
+    "prescribed_medicines": {
+      "type": "string"
+    },
+    "aftercare_instructions": {
+      "type": "string"
+    },
+    "dos_and_donts": {
+      "type": "string"
+    },
+    "precautions": {
+      "type": "string"
+    },
+    "next_appointment_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "next_appointment_time": {
+      "type": "string"
+    },
+    "next_appointment_department": {
+      "type": "string"
+    },
+    "recovery_status": {
+      "type": "string",
+      "enum": [
+        "Stable",
+        "Needs Monitoring",
+        "High Risk"
+      ],
+      "default": "Stable"
+    },
+    "recovery_score": {
+      "type": "number",
+      "default": 100
+    },
+    "risk_level": {
+      "type": "string",
+      "enum": [
+        "Low",
+        "Medium",
+        "High"
+      ],
+      "default": "Low"
+    },
+    "otp": {
+      "type": "string"
+    },
+    "otp_expiry": {
+      "type": "string"
+    },
+    "past_surgeries": {
+      "type": "array",
+      "items": {
+        "type": "object"
+      }
+    },
+    "doctor_notes": {
+      "type": "string"
+    }
+  },
+  "required": [
+    "name",
+    "mobile_number"
+  ]
+}

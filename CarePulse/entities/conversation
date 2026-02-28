@@ -1,0 +1,33 @@
+{
+  "name": "Conversation",
+  "type": "object",
+  "properties": {
+    "patient_id": {
+      "type": "string"
+    },
+    "messages": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "properties": {
+          "role": {
+            "type": "string"
+          },
+          "content": {
+            "type": "string"
+          },
+          "timestamp": {
+            "type": "string"
+          }
+        }
+      }
+    },
+    "session_date": {
+      "type": "string",
+      "format": "date"
+    }
+  },
+  "required": [
+    "patient_id"
+  ]
+}

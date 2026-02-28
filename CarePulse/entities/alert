@@ -1,0 +1,61 @@
+{
+  "name": "Alert",
+  "type": "object",
+  "properties": {
+    "patient_id": {
+      "type": "string"
+    },
+    "hospital_id": {
+      "type": "string"
+    },
+    "patient_name": {
+      "type": "string"
+    },
+    "doctor_email": {
+      "type": "string"
+    },
+    "alert_type": {
+      "type": "string",
+      "enum": [
+        "High Risk Response",
+        "Severe Symptoms",
+        "Missed Check-in",
+        "Emergency",
+        "Patient Concern"
+      ]
+    },
+    "severity": {
+      "type": "string",
+      "enum": [
+        "Low",
+        "Medium",
+        "High",
+        "Critical"
+      ]
+    },
+    "message": {
+      "type": "string"
+    },
+    "is_resolved": {
+      "type": "boolean",
+      "default": false
+    },
+    "doctor_response": {
+      "type": "string"
+    },
+    "image_url": {
+      "type": "string"
+    },
+    "voice_url": {
+      "type": "string"
+    },
+    "email_sent": {
+      "type": "boolean",
+      "default": false
+    }
+  },
+  "required": [
+    "patient_id",
+    "alert_type"
+  ]
+}

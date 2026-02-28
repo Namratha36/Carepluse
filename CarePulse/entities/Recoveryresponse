@@ -1,0 +1,70 @@
+{
+  "name": "RecoveryResponse",
+  "type": "object",
+  "properties": {
+    "patient_id": {
+      "type": "string"
+    },
+    "hospital_id": {
+      "type": "string"
+    },
+    "response_date": {
+      "type": "string",
+      "format": "date"
+    },
+    "language": {
+      "type": "string",
+      "default": "English"
+    },
+    "pain_level": {
+      "type": "number"
+    },
+    "fever": {
+      "type": "boolean"
+    },
+    "fever_temperature": {
+      "type": "number"
+    },
+    "swelling": {
+      "type": "boolean"
+    },
+    "mobility_level": {
+      "type": "string",
+      "enum": [
+        "Normal",
+        "Limited",
+        "Bedridden"
+      ]
+    },
+    "medication_taken": {
+      "type": "boolean"
+    },
+    "infection_signs": {
+      "type": "boolean"
+    },
+    "bleeding": {
+      "type": "boolean"
+    },
+    "breathing_issues": {
+      "type": "boolean"
+    },
+    "abnormal_discomfort": {
+      "type": "boolean"
+    },
+    "additional_notes": {
+      "type": "string"
+    },
+    "surgery_specific_responses": {
+      "type": "object"
+    },
+    "ai_risk_assessment": {
+      "type": "string"
+    },
+    "risk_score": {
+      "type": "number"
+    }
+  },
+  "required": [
+    "patient_id"
+  ]
+}
